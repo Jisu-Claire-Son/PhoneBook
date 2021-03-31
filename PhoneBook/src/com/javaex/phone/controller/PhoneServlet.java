@@ -43,7 +43,7 @@ public class PhoneServlet extends HttpServlet {
 			
 			req.setAttribute("list", list);
 			RequestDispatcher rd = 
-					getServletContext().getRequestDispatcher("/WEB-INF/views/phone/search.jsp");
+					getServletContext().getRequestDispatcher("/WEB-INF/views/phone/index.jsp");
 			rd.forward(req, resp);
 		} else {
 			//	리스트를 불러와 req에 attribute로 추가

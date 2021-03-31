@@ -21,6 +21,7 @@ th{background:#eee;}
 	<h2>목록</h2>
 	<form action="<c:url value="/ph"/>" method="get">
 		<label>검색어</label>
+		<input type="hidden" name="a" value="search" />
 		<input type="text" name="keyword">
 		<input type="submit" value="검색">
 	</form>
