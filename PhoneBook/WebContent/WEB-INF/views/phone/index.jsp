@@ -56,5 +56,8 @@ th{background:#eee;}
 	<p>
 		<a href="<c:url value="/ph?a=form" />">새 주소 추가</a>
 	</p>
+	<p>
+		<a href="<c:url value="/ph"/>">목록 보기</a>
+	</p>
 </body>
 </html>
