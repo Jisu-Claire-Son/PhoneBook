@@ -43,7 +43,7 @@ public class PhoneServlet extends HttpServlet {
 			
 			req.setAttribute("list", list);
 			RequestDispatcher rd = 
-					getServletContext().getRequestDispatcher("/WEB-INF/views/phone/index.jsp");
+					getServletContext().getRequestDispatcher("/WEB-INF/views/phone/search.jsp");
 			rd.forward(req, resp);
 		} else {
 			//	리스트를 불러와 req에 attribute로 추가
@@ -51,7 +51,7 @@ public class PhoneServlet extends HttpServlet {
 			//	전달해줄 객체 생성
 			List<PhoneVoDB> list = dao.getList();
 			
-			req.setAttribute("list", list);	//	전달받은 서블릿은 요청으로부터 이 속성을 꺼내 쓸 수 있다
+			req.setAttribute("list", list);
 			
 			//	Dispatcher 확보
 			RequestDispatcher rd = 
@@ -64,7 +64,6 @@ public class PhoneServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//		req.setCharacterEncoding("UTF-8");
 		String action = req.getParameter("action");	//	히든 필드
 		
 		if ("insert".equals(action)) {	//	action이 insert -> 삽입

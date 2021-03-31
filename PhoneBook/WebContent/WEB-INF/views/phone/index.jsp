@@ -19,7 +19,7 @@ th{background:#eee;}
 	<h1>주소록 Servlet(Model 2)</h1>
 	
 	<h2>목록</h2>
-	<form action="<c:url value="/ph"/>">
+	<form action="<c:url value="/ph"/>" method="get">
 		<label>검색어</label>
 		<input type="text" name="keyword">
 		<input type="submit" value="검색">

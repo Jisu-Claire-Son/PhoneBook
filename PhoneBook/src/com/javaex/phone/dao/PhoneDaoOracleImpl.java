@@ -67,9 +67,9 @@ public class PhoneDaoOracleImpl implements PhoneDao {
 		
 		try {
 			conn = getConnection();
-			String sql = "SELECT id, name, hp, tel FROM phone_book WHERE name LIKE ?";
+			String sql = "SELECT id, name, hp, tel FROM phone_book WHERE name LIKE  '%' || ? || '%'";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "%" + keyword + "%");
+			pstmt.setString(1, keyword);
 			
 			rs = pstmt.executeQuery();
 			
